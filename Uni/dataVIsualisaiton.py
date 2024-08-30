@@ -16,5 +16,41 @@ with open(file_name, 'a') as file:
 
 #Deleting
 
-file_to_delete = 'joke.txt'
-os.method(file_to_delete)
+# file_to_delete = 'joke.txt'
+# os.remove(file_to_delete)
+# print(f'{file_to_delete} has been deleted')
+
+#Merging files
+
+file1_path = 'example.txt'
+fil2_path = 'new_file.txt'
+output = 'merged_file.txt'
+
+with open(file1_path, 'r') as file1, open(fil2_path, 'r') as file2:
+    data1 = file1.read()
+    data2 = file2.read()
+
+with open(output, 'w') as output_file:
+    output_file.write(data1)
+    output_file.write('\n')
+    output_file.write(data2)
+
+print('files have been merged successfully')
+
+
+with open('data_file.txt', 'r') as file:
+    #Read entire content of the file
+    file_content = file.read()
+
+print(file_content)
+
+#Filter the file 
+
+input_file = 'data_file.txt'
+output_file = 'filtered_name.txt'
+
+with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
+    for line in infile:
+        name, surname, age = line.strip().split(',')
+        if name.strip() != 'Alice':
+            outfile.write(f'{name}, {surname}, {age} \n')

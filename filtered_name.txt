@@ -1,0 +1,10 @@
+Name, Surname, Age 
+John, Smith, 25 
+Paula, Atkinson, 43 
+David, Brown, 28 
+Bob, Wilson, 49 
+Charlie, Taylor, 28 
+Henry, Miller, 20 
+Jack, Harris, 35 
+Ella, Lee, 22 
+Frank, Anderson, 38 
