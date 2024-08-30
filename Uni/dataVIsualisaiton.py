@@ -54,3 +54,12 @@ with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
         name, surname, age = line.strip().split(',')
         if name.strip() != 'Alice':
             outfile.write(f'{name}, {surname}, {age} \n')
+
+
+with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
+    first_line = True # A line to skip the first line 
+    for line in infile:
+        if first_line:
+            output_file.write(line)
+            first_line= False
+            continue #Skip the first line
